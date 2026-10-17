@@ -1,6 +1,11 @@
 const cam = document.getElementById('cam');
 const bgcam = document.getElementById('bgcam');
 const joystick = document.getElementById("joystick");
+const joystickWidth = joystick.offsetWidth;
+const joystickX = document.getElementById("joystickX")
+const joystickY = document.getElementById("joystickY")
+
+
 
 
 
@@ -41,8 +46,16 @@ function joystickData() {
     var bounds = joystick.getBoundingClientRect();
     let x = event.clientX - bounds.left;
     let y = event.clientY - bounds.top;
+    let normalX = (x) * (256) / (184);
+    let normalY = (y) * (256) / (184);
+    let clampedX = Math.min(Math.max(normalX, 0), 256)
+    let clampedY = Math.min(Math.max(normalY, 0), 256)
+    joystickX.value = clampedX;
+    joystickY.value = clampedY;
 
-    console.log(x, y);
+
+
+    console.log(clampedX, clampedY);
 }
 
 

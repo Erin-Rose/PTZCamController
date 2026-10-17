@@ -44,8 +44,10 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     background-color: #2b2b2b
 }
 
-#cameraY {
+#joystickY {
     writing-mode: vertical-lr;
+    direction: rtl;
+    appearance: slider-vertical;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -53,7 +55,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     height: 90%;
 }
 
-#cameraX {
+#joystickX {
     position: absolute;
     bottom: 0px;
     right: 0px;
