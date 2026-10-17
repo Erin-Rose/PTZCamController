@@ -18,7 +18,7 @@
     <div id="joystickcontainer">
         <input id="cameraY" type="range" min="0" max="256" />
         <input id="cameraX" type="range" min="0" max="256" />
-        <div id="joystick"></div>
+        <div onmousedown="joystickClick()" onmouseup="joystickRelease(event)" id="joystick"></div>
     </div>
 
     <script src="UI.js"></script>
