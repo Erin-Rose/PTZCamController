@@ -50,12 +50,13 @@ function joystickData() {
     let normalY = (y) * (256) / (184);
     let clampedX = Math.min(Math.max(normalX, 0), 256)
     let clampedY = Math.min(Math.max(normalY, 0), 256)
+    let invertedY = 256 - clampedY;
     joystickX.value = clampedX;
-    joystickY.value = clampedY;
+    joystickY.value = invertedY;
 
 
 
-    console.log(clampedX, clampedY);
+    console.log(clampedX, invertedY);
 }
 
 
